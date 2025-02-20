@@ -1,5 +1,6 @@
 print("Hello World")
 
+# For Storing Values 
 name = "Hafiz Muhammad Umar Farooq"
 age = 16
 isAlive = True
@@ -20,7 +21,9 @@ print(a - b)
 print(a * b)
 print(int(a / b))
 print(a % b)
+# Greater 
 print(a > b)
+# Less Then
 print(a < b)
 print(a < b)  # False
 print(not (a < b))  # True
