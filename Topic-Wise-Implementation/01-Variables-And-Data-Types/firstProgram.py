@@ -1,10 +1,11 @@
 print("Hello World")
 
-# For Storing Values 
+# For Storing Values
 name = "Hafiz Muhammad Umar Farooq"
 age = 16
 isAlive = True
 
+# For Printing Somthing
 print("My Name is:", name)
 print("My Age is:", age)
 
@@ -21,7 +22,7 @@ print(a - b)
 print(a * b)
 print(int(a / b))
 print(a % b)
-# Greater 
+# Greater
 print(a > b)
 # Less Then
 print(a < b)
