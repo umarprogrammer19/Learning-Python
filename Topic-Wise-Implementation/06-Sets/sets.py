@@ -33,4 +33,12 @@ new_set.add(5)
 
 # pop() delete random element from the sets
 new_set.pop()
-print(new_set) # returns all the element with removes any random value from the set
+print(new_set)  # returns all the element with removes any random value from the set
+
+# union combines 2 sets
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.union(set2))  # {1, 2, 3, 4, 5, 6}
+
+# intersection returns common elements
+print(set1.intersection(set2))  # {3, 4}
