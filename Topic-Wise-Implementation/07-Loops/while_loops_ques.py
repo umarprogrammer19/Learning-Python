@@ -46,3 +46,13 @@ while i <= 10:
         continue
     print(i)
     i += 1
+
+# WAP to find the sum of first n numbers using while loop
+n = int(input("Please Enter a number till you need to find the sum: "))
+count = 1
+sum = 0
+
+while count <= n:
+    sum += count
+    count += 1
+print(f"The Sum Of First {count - 1} number is {sum}")
