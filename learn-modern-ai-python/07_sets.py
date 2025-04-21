@@ -1,5 +1,3 @@
-# Author: Arif Kasim Rozani - (Team Operation Badar)
-
 # The Set Data Type
 # A set is an unordered, unindexed, mutable collection with no duplicate elements.
 
