@@ -26,5 +26,15 @@ for num in nums_tup:
         print(f"{x} Found")
         break
 
-for i in range(0, 101, 2): # 0 is a starting condition 101 is a stopping condition and 2 is a step that i increase i in every time loop runs
+for i in range(
+    0, 101, 2
+):  # 0 is a starting condition 101 is a stopping condition and 2 is a step that i increase i in every time loop runs
     print(i)
+
+# WAP to find the factorial of first n numbers using for loop
+
+n = int(input("Please Enter a number which you want the factorial: "))
+fact = 1
+for i in range(1, n + 1):
+    fact *= i
+print(fact)
