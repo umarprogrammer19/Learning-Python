@@ -68,6 +68,7 @@ acc1.credit(12000)
 # A method display_info() to print out the student's details.
 # A method update_grade(new_grade) to change the student's grade.
 
+
 class Student:
     def __init__(self, name, age, grade):
         self.name = name
@@ -87,3 +88,52 @@ class Student:
 s1 = Student("Ammar", 19, "A+")
 s1.display_info()
 s1.update_grade("A")
+
+
+# Create a class Rectangle:
+# Attributes: length, width
+
+# Methods:
+# A constructor to initialize the rectangle's dimensions.
+# A method area() to calculate and return the area of the rectangle.
+# A method perimeter() to calculate and return the perimeter of the rectangle.
+
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    # Area
+    def calculate_area(self):
+        return self.length * self.width
+
+    # perimeter
+    def calculate_perimeter(self):
+        return 2 * (self.length + self.width)
+
+
+rect = Rectangle(10, 10)
+area = rect.calculate_area()
+peri = rect.calculate_perimeter()
+print(f"The Area Of A Rectangle is {area} and perimeter of a rectangle is {peri}")
+
+# Create a class called Person:
+# Attributes: name, age, gender
+# Methods:
+# A constructor to initialize the person’s details.
+# A method greet() to print a greeting message that includes the person's name.
+
+
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+    def greet(self):
+        print(f"Hello {self.name}")
+
+
+p1 = Person("Umar Farooq", 17, "Male")
+p1.greet()
