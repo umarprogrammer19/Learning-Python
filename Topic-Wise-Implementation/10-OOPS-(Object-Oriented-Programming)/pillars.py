@@ -131,3 +131,63 @@ p1 = People()
 p1.change_name("Umar")
 print(p1.name)
 print(People.name)
+
+
+# property decorator
+class Stu:
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+
+    @property
+    def percentage(self):
+        return str((self.phy + self.chem + self.math) / 3)
+
+
+stu1 = Stu(98, 97, 99)
+print(stu1.percentage)
+
+stu1.math = 10
+print(stu1.percentage)
+
+# Polymorphism : Opearator Overloading
+# when the same opearator is allowed to have different meaning according to the context
+
+
+class Complex:
+    def __init__(self, real, imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def showNumber(self):
+        print(f"{self.real}i + {self.imaginary}j")
+
+    # def add(self, num2):
+    #     new_real = self.real + num2.real
+    #     new_imaginary = self.imaginary + num2.imaginary
+    #     return Complex(new_real, new_imaginary)
+
+    # opearators and dunder functions (function which has __ is called dunder functions)
+    
+    def __add__(self, num2):
+        new_real = self.real + num2.real
+        new_imaginary = self.imaginary + num2.imaginary
+        return Complex(new_real, new_imaginary)
+
+    def __sub__(self, num2):
+        new_real = self.real - num2.real
+        new_imaginary = self.imaginary - num2.imaginary
+        return Complex(new_real, new_imaginary)
+
+
+c1 = Complex(5, 10)
+c1.showNumber()
+
+c2 = Complex(10, 10)
+c2.showNumber()
+
+c3 = c1 + c2
+c4 = c1 - c2
+c3.showNumber()
+c4.showNumber()
