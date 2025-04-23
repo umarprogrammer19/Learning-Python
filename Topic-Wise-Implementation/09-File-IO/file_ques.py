@@ -9,7 +9,6 @@ with open("practice.txt", "w") as f:
     f.write("we are learning file I/O\n")
     f.write("using Java\n")
     f.write("i Like programming in Java\n")
-    f.close()
 
 # Replace All The java with python
 with open("practice.txt", "r") as f:
@@ -18,6 +17,7 @@ new_data = data.replace("Java", "Python")
 
 with open("practice.txt", "w") as f:
     f.write(new_data)
+    
 
 # Search the word learning exist or not in the file practice
 with open("practice.txt", "r") as f:
