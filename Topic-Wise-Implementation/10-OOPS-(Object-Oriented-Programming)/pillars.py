@@ -53,11 +53,81 @@ print(acc.account_number)
 
 
 class ToyotaCar(Car):
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, brand):
+        self.brand = brand
 
 
 car1 = ToyotaCar("Fortuner")
 car2 = ToyotaCar("Prius")
-print(car1.name, car2.name)
 car1.start()  # prints because it is inherited
+print(car1.brand, car2.brand)
+
+# Types
+# Single Inheritence
+# Multi-level Inheritence
+# Multiple Inheritence
+
+
+class Fortuner(ToyotaCar):
+    def __init__(self, type):
+        self.type = type
+
+
+f1 = Fortuner("Diesel")
+f1.start()
+
+
+# multiple inheritence
+class A:
+    varA = "This is class A"
+
+
+class B:
+    varB = "This is class B"
+
+
+class C(A, B):
+    varC = "This is class C"
+
+
+c1 = C()
+print(c1.varA)
+
+
+# Super method
+# is used to access methods from parents
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+
+class Student(Person):
+    def __init__(self, name):
+        super().__init__(name)
+
+
+s = Student("Ammar")
+print(s.name)
+
+# @classmethod decorator
+# A class method is bound to the class & receives the class as an implicit 1st argument
+# Note: static method can't access or modify the class state & generally for utility
+
+
+class People:
+    name = "Unknown"
+
+    # def change_name(self, name):
+    #     self.name = name
+    #     Person.name = name
+    #     self.__class__.name = name
+
+    @classmethod
+    def change_name(cls, name):
+        cls.name = name
+
+
+p1 = People()
+p1.change_name("Umar")
+print(p1.name)
+print(People.name)
