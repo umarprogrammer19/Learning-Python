@@ -59,3 +59,31 @@ acc1 = Account(10000, 42201)
 acc1.check_balance()
 acc1.debit(5000)
 acc1.credit(12000)
+
+# Define a class called Student that represents a student:
+
+# Attributes: name, age, grade
+# Methods:
+# A constructor to initialize the attributes.
+# A method display_info() to print out the student's details.
+# A method update_grade(new_grade) to change the student's grade.
+
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+    def display_info(self):
+        print(
+            f"The Student name is {self.name} age is {self.age} and the grade is {self.grade}"
+        )
+
+    def update_grade(self, new_grade):
+        self.grade = new_grade
+        self.display_info()
+
+
+s1 = Student("Ammar", 19, "A+")
+s1.display_info()
+s1.update_grade("A")
