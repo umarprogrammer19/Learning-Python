@@ -72,7 +72,41 @@ class Manager(Employee):
 
 
 e1 = Employee("Ammar", 50000)
-e1.increase_salary(10) # 55000 + 10%
+e1.increase_salary(10)  # 55000 + 10%
 
 m1 = Manager("Umar Farooq", 50000, "Development")
-m1.increase_salary(10) # 60000 + 20%
+m1.increase_salary(10)  # 60000 + 20%
+
+# Create a class Book:
+# Attributes: title, author, pages
+
+# Methods:
+# A constructor to initialize these attributes.
+# A method book_summary() that displays a summary of the book with title, author, and number of pages.
+# Now, create a subclass Ebook that adds an additional attribute file_size (in MB).
+# Override the book_summary() method to include the file_size.
+
+
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def book_summary(self):
+        return f"Title: {self.title}, Author: {self.author}, Pages: {self.pages}"
+
+
+class Ebook(Book):
+    def __init__(self, title, author, pages, file_size):
+        super().__init__(title, author, pages)
+        self.file_size = file_size
+
+    def book_summary(self):
+        return f"Title: {self.title}, Author: {self.author}, Pages: {self.pages}, File Size: {self.file_size}MB"
+
+
+b = Book("Harry Porter", "Ammar", 200)
+print(b.book_summary())
+b2 = Ebook("Harry Porter", "Ammar", 200, 100)
+print(b2.book_summary())
