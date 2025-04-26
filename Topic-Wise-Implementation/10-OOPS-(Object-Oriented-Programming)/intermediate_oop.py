@@ -110,3 +110,71 @@ b = Book("Harry Porter", "Ammar", 200)
 print(b.book_summary())
 b2 = Ebook("Harry Porter", "Ammar", 200, 100)
 print(b2.book_summary())
+
+# Define a class Shape3D:
+# Attributes: length, width, height
+# Methods:
+# A constructor to initialize these attributes.
+# A method volume() to calculate the volume of the 3D shape (rectangular prism).
+# Now, create a subclass Cube that inherits from Shape3D:
+# Override the volume() method to calculate the volume of a cube using the length.
+
+
+class Shape3D:
+    def __init__(self, length, width, height):
+        self.length = length
+        self.width = width
+        self.height = height
+
+    def volume(self):
+        return self.length * self.width * self.height
+
+
+class Cube(Shape3D):
+    def __init__(self, length):
+        super().__init__(length, length, length)
+
+    def volume(self):
+        return self.length**3
+
+
+s = Cube(10)
+print(s.volume())
+
+# Create a class Library:
+# Attributes: books (a list of book titles)
+
+# Methods:
+# A constructor to initialize the list of books.
+# A method add_book(book_name) to add a book to the library.
+# A method remove_book(book_name) to remove a book from the library.
+# A method show_books() to display the list of all available books.
+
+
+class Library:
+    def __init__(self, books):
+        if isinstance(books, list):
+            self.books = books
+        else:
+            return
+
+    def add_book(self, book_name):
+        self.books.append(book_name)
+        print(f"Book {book_name} Added Successfully In The Library")
+        self.show_books()
+
+    def remove_book(self, book_name):
+        self.books.remove(book_name)
+        print(f"Book {book_name} Removed Successfully From The Library")
+        self.show_books()
+
+    def show_books(self):
+        print(self.books)
+
+
+book = Library(["Book 1", "Book 2", "Book 3"])
+book.show_books()
+book.remove_book("Book 1")
+book.remove_book("Book 2")
+book.add_book("Book 4")
+book.add_book("Book 5")
