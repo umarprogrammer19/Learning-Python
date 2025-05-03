@@ -1,4 +1,4 @@
-# File Handling in Python: A Comprehensive Example
+# File Handling in Python: A Comprehensive Examples
 
 # 1. Opening a File
 # 'w' mode: Write to a file (creates the file if it doesn't exist)
