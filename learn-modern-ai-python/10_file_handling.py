@@ -7,7 +7,7 @@
 # 'x' mode: Exclusive creation (fails if the file exists)
 # 'b' mode: Binary mode (for binary files)
 
-# Create a file and write to it
+# For file creatng and writing in it
 with open("example.txt", "w") as f:
     f.write("This is line 1.\n")
     f.write("This is line 2.\n")
